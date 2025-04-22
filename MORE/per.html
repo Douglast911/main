@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Anthony Ho - Resume</title>
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    a {
+      height: 30px;
+      width: 30px;
+    }
+
+    .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    }
+
+    p {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    word-spacing: 1px;
+    line-height: 20px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+.project-1 {
+ width: 2000px;
+}
+.project-2 {
+width: 2000px;
+}
+
+
+    .project-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-left: 10%;
+    padding-bottom: 50px;
+    gap: 50px;
+}
+
+    .pic1 {
+      width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    float: right;
+    }
+
+    #par{
+      display: flex;
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      justify-content: center;
+
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem 0 3rem;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.25rem;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    nav {
+      background: #21618c;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 2rem 0;
+      flex-wrap: nowrap;
+    }
+    nav a {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.30rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #142f49;
+      outline: none;
+    }
+
+    /* Sections */
+    section {
+      background: white;
+      margin-top: 2rem;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      border-bottom: 3px solid #007acc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      color: #007acc;
+    }
+
+    /* Hero Section */
+    #hero {
+      text-align: center;
+    }
+    #hero img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #007acc;
+    }
+    #hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Resume Section */
+    #resume article {
+      margin-bottom: 2rem;
+    }
+    #resume h3 {
+      margin-bottom: 0.25rem;
+      color: #004080;
+    }
+    #resume time {
+      font-style: italic;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    #resume ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+      color: #444;
+    }
+
+    /* Projects Section */
+    #projects .project {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+    #projects .project:last-child {
+      border-bottom: none;
+    }
+    #projects .project h3 {
+      margin: 0 0 0.5rem;
+      color: #004080;
+    }
+    #projects .project p {
+      margin: 0 0 0.5rem;
+      color: #555;
+    }
+    #projects .project a {
+      font-weight: 600;
+    }
+
+    /* About Me */
+    #about p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        gap: 2rem;
+      }
+      header h1 {
+        font-size: 3rem;
+      }
+      section {
+        padding: 1rem;
+      }
+      #hero p {
+        font-size: 2rem;
+      }
+    }
+
+    .contact-icons {
+      height: 3rem;
+    background-color: #d7fbff;
+    display: flex;
+    align-items: center;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>Mark Anthony Ho</h1>
+    <p>Information Technology Student | Second Year College | Problem Solver</p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <a href="#hero">Home</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section id="hero" aria-label="Introduction">
+      <img src="../MORE/pic/890c0671-344b-4956-b316-f2c2dd2998e6.jpg" class="pic1" alt="Anthony" />
+    </section>
+    <div id="par">
+    <p>I’m a second-year IT student who loves crafting digital experiences and solving real-world problems through technology. I enjoy working on creative projects and continuously learning new skills..</p>
+  </div>
+
+    <!-- Resume Section -->
+    <section id="resume" aria-label="Resume">
+      <h2>Resume</h2>
+
+      <article aria-labelledby="education-title">
+        <h3 id="education-title">Education</h3>
+        <ul>
+          <li><strong>Primary Education</strong> - Baguio City (batch 2014 - 15)</li>
+          <li><strong>Secondary Education</strong> - Philippine Nazarene College (PNC) (batch 2019 - 2020)</li>
+          <li><strong>Secondary Education</strong> - Benguet National Highschool (BeNhs) (batch 2021 - 2022)</li>
+          <li><strong>Tertiary Education</strong>- Kings College of the Philippines (KCP) (2022 - up to date)</li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="work-experience-title">
+        <h3 id="work-experience-title">Work Experience</h3>
+        <a href="https://valleybread.com/">
+          <img class="bread" src="../pic/images.jpg" alt="bread">
+        </a>
+        <p> Worked at Valley Bread for 2 months</p>
+
+        <section aria-label="Job at Tech Solutions Inc.">
+          <h4>Second year, Information Technology at (KCP)</h4>
+          <time datetime="2024-2025">2024-2025</time><time datetime="2024-04"></time>
+          </div>
+
+
+          
+        </section>
+
+        <section aria-label="Job at Web Innovators">
+          <h4>Frontend Developer - Web Innovators</h4>
+          <time datetime="2024">2024</time> – <time datetime="2025-04">april 2025</time>
+          <ul>
+            <li>Developed responsive UI components with React and Redux.</li>
+            <li>Optimized website performance and accessibility.</li>
+          </ul>
+        </section>
+      </article>
+
+      <article aria-labelledby="skills-title">
+        <h3 id="skills-title">Skills</h3>
+        <ul>
+          <li>Languages: Java, Python, HTML5, CSS ⭐️⭐️</li>
+          <li>Tools: GitHub ⭐️⭐️</li>
+          <li>Other: REST APIs, Agile methodologies, UI/UX design principles ⭐️⭐️⭐️</li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="links-title">
+        <h3 id="links-title">Links</h3>
+        <ul>
+          <li><a href="https://github.com/Douglast911" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+          <li><a href="https://studio.youtube.com/channel/UCxt1cg3Y00IJ0tbYib-svDw" target="_blank" rel="noopener noreferrer">youtube</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" aria-label="Projects and Previous Work">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>TaskMaster</h3>
+        <p>A task management app with real-time collaboration and notifications.</p>
+        <p><a href="https://www.figma.com/files/team/1332292148429794077/recents-and-sharing?fuid=1332267598087960970" target="_blank" rel="noopener noreferrer">Figma</a></p>
+      </div>
+
+      <div class="project">
+        <h3>Projects</h3>
+        <p>A web application that visualizes global data trends with interactive charts and maps.</p>
+        <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+      </div>
+
+      <div class="project-container">
+        <div class="project-card">
+          <a href="../MORE/projctcard/Birthday Invite Project.html">
+            <img class="project-1" src="../MORE/projctcard/birthday-cake3.4.jpeg" alt="birthday invitation">
+          </a>
+      </div>
+      <div class="project-card">
+        <a href="./movitational/Motivational/Motivational/inde.html">
+          <img class="project-2" src="./movitational/Motivational/Motivational/434919628_7471467906222655_2232697860109488030_n.jpg" alt="motivational">
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="../10.3 Mondrian Project/10.3 Mondrian Project/index.html">
+          <img class="project-3" src="../10.3 Mondrian Project/10.3 Mondrian Project/goal.png" alt="Mondarian">
+          </a>
+      </div>
+
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" aria-label="About Me">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm a second-year Information Technology student with a strong passion for technology, problem-solving, and continuous learning. Over the past two years, I've gained hands-on experience with programming languages like Java, Python, and HTML/CSS, and I've worked on various academic projects that involve web development, database management, and networking. I enjoy exploring new tech trends, building creative digital solutions, and collaborating with others on exciting challenges. I'm currently looking to grow my skills further through internships and real-world projects in software development or IT support.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+     <section id="contact">
+
+     </section>
+     <div class="container-icon">
+   <div class="contact-icons">
+    <a href="https://www.facebook.com/ccomikks">
+      <img src="./Contacts/facebook.png" alt="fb" class="icon">
+    </a>
+    <a href="https://www.instagram.com/ccomikks/">
+      <img src="./Contacts/Instagram.png" alt="insta" class="icon">
+    </a>
+    <a href="https://mail.google.com/mail/u/0/#inbox">
+      <img src="./Contacts/Gmail.png" alt="email" class="icon">
+    </a>   
+   </div>
+  </div>
+</section>
+  <br> © Copyright 2025 MARK. All rights reserved
+
+
+
+  </main>
+</body>
+</html>
